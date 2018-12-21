@@ -48,12 +48,12 @@ public class Analyzer {
 
     public void setLessRelations(){
         for (Map.Entry entry : this.equals.entrySet() ) {
-            if(entry.getKey() instanceof Terminal && entry.getValue() instanceof  NonTerminal){
+            if(entry.getValue() instanceof  NonTerminal){
                 ArrayList<LinguisticUnit> less = this.firstPlus((NonTerminal) entry.getValue());
                 this.terminalsFirstPlus.clear();
                 for ( LinguisticUnit linguisticUnit: less  ) {
                     String currentUnitName = linguisticUnit.getName();
-                    String prevUnitName = ((Terminal) entry.getKey()).getName();
+                    String prevUnitName = ((LinguisticUnit) entry.getKey()).getName();
 
 
                     //додавання відношення у таблицю

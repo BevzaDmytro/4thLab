@@ -16,13 +16,13 @@ public class MyFrame {
     public MyFrame() {
         this.frame =  new JFrame("JTableExample");
         this.frame.getContentPane().setLayout(new FlowLayout());
-        this.frame.setSize(800, 500);
+        this.frame.setSize(1400, 500);
         this.frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         this.panel = new JTabbedPane();
-        this.panel.setPreferredSize(new Dimension(1400,800));
+        this.panel.setPreferredSize(new Dimension(1420,800));
         this.panel1= new JPanel();
-        panel1.setPreferredSize(new Dimension(1400, 800));
+        panel1.setPreferredSize(new Dimension(1420, 800));
 
 
     }
@@ -35,7 +35,7 @@ public class MyFrame {
 
         JTable jTab1 = new JTable(new RelationsTableView(relations));
         jTab1.getColumnModel().getColumn(1).setMaxWidth(20);
-        jTab1.setPreferredScrollableViewportSize(new Dimension(1380, 800));
+        jTab1.setPreferredScrollableViewportSize(new Dimension(1400, 800));
 
         for (int i =10 ; i<jTab1.getColumnCount();i++) {
             jTab1.getColumnModel().getColumn(i).setPreferredWidth(20);
